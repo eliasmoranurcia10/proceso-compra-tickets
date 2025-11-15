@@ -1,0 +1,12 @@
+.Welcome {
+  display: flex;
+  flex-direction: column;
+}
+
+.Welcome-cancel {
+  margin-left: auto;
+}
+
+.Welcome p{
+  color: black;
+}

@@ -1,0 +1,45 @@
+.Passengers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.Passengers input {
+  font-size: 1rem;
+  margin: 16px 0;
+  border-radius: 8px;
+  padding: 8px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lista-rectangulos {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  align-items: center;
+  gap: 5px; /* Espacio entre rectángulos */
+  margin-top: 20px;
+}
+
+.rectangulo {
+  background-color: #f6f7fc; /* Azul claro */
+  border: 1px solid #925ef3;
+  border-radius: 8px;
+  width: 250px;
+  padding: 1px 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0d47a1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.rectangulo:hover {
+  background-color: #d7bbfb;
+  color: black;
+  transform: translateY(-3px);
+}
