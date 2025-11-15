@@ -92,9 +92,9 @@ const bookingMachine = createMachine(
           ],
           ADD: {
             target: 'passengers',
-            actions: assign(
-              ({context, event}) => context.passengers.push(event.newPassengers)
-            )
+            actions: assign({
+              passengers: ({ context, event }) => [...context.passengers, event.newPassengers]
+            }),
           }
         },
       },
@@ -109,7 +109,7 @@ const bookingMachine = createMachine(
           FINISH: [
             {
               target: "inicial",
-              actions: [],
+              actions: 'cleanContext',
             },
           ],
         },
@@ -123,6 +123,7 @@ const bookingMachine = createMachine(
       imprimirSalida: () => console.log('Imprimir Salida del search'),
       cleanContext: assign({
         selectedCountry: '',
+        countries: [],
         passengers: [],
       }),
     },
